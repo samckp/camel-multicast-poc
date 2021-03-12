@@ -15,8 +15,8 @@ public class MultiRoute extends RouteBuilder {
                 .log(LoggingLevel.INFO, "Multicast Route Starting !!")
                 .multicast()
                 .to("{{toRoute}}")
-//                .to("")
-//                .to("")
+                .to("{{toRoute1}}")
+                .to("{{toRoute2}}")
                 ;
     }
 }
