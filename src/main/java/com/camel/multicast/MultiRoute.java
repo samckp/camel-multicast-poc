@@ -11,7 +11,7 @@ public class MultiRoute extends RouteBuilder {
     public void configure() throws Exception {
 
         from("{{inputFilePath}}")
-                .routeId("mutliRouteId")
+                .routeId("multicastRouteId")
                 .log(LoggingLevel.INFO, "Multicast Route Starting !!")
                 .multicast()
                 .to("{{toRoute}}")
