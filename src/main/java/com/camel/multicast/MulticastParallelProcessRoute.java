@@ -21,7 +21,7 @@ public class MulticastParallelProcessRoute extends RouteBuilder {
                 .multicast()
                 .stopOnException()
                 //.parallelProcessing()//by default thread pool size is 10
-                .parallelProcessing().executorService(executor)  // manually set executor pool size
+                .parallelProcessing().timeout(1000).executorService(executor)  // manually set executor pool size
                 .to("{{toRoute11}}")
                 .to("{{toRoute12}}")
                 .to("{{toRoute13}}")
